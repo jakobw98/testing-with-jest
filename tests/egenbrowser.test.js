@@ -42,9 +42,7 @@ describe('Clicking "Pusha till stacken"', () => {
     it('should show testa1 as the top item on the stack', async () => {
         let peek = await driver.findElement(By.id('peek'));
         await peek.click();
-        let alert = await driver.switchTo().alert();
-        let topItem = await alert.getText();
-        await alert.accept();
+        let topItem = await driver.findElement(By.id('top_of_stack')).getText();
         expect(topItem).toEqual('testa1');
     });
 });

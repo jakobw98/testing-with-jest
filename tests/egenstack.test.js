@@ -1,4 +1,4 @@
-const stack = require('/stack');
+const stack = require('../src/stack');
 
 describe('Stack', () => {
   beforeEach(() => {
