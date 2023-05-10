@@ -6,14 +6,14 @@ const defaultTimeout = 10000;
 let driver;
 jest.setTimeout(1000 * 60 * 5); // 5 minuter
 
-// Det här körs innan vi kör testerna för att säkerställa att Firefox är igång
+// Det här körs innan vi kör testerna för att säkerställa att Chrome är igång
 beforeAll(async () => {
 console.log(fileUnderTest);
     driver = await new Builder().forBrowser('chrome').build();
     await driver.get(fileUnderTest);
 });
 
-// Allra sist avslutar vi Firefox igen
+// Allra sist avslutar vi Chrome igen
 afterAll(async() => {
     await driver.quit();
 }, defaultTimeout);
