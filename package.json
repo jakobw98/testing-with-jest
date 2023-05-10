@@ -14,5 +14,8 @@
     "url": "https://github.com/jakobw98/testing-with-jest/new/main?readme=1"
   },
   "author": "Jakob Wind",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.13.6"
+  }
 }
